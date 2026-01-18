@@ -36,11 +36,15 @@ testcases = [
 ]
 
 class Solution:
+    def PalindromeLength(self, s: str, mid : int) -> int:
+	if	
+
     def longestPalindrome(self, s: str) -> str:
-        start = 0
-        length = 0
-        for i in range(len(s)):
-            
+        longest = 0
+	mid = len(s)/2 + 1
+        len = PalindromeLength(s, mid)
+
+        
 
 def main():
     RunTests(testcases)	
