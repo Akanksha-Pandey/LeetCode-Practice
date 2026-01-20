@@ -31,7 +31,7 @@ def RunTests(testcases) -> None:
 ###################################################################
 
 testcases = [ 
-    Test("babad", "bab"),
+    Test("babad", "aba"),
     Test("cbbd", "bb")
 ]
 
@@ -43,16 +43,13 @@ class Solution:
         while left > 0 and right < len(s) - 1 and s[left - 1] == s[right + 1]:
             left = left - 1
             right = right + 1
-        first = s[left : right]
-        print(first)
-        
+        first = s[left : right+1]        
         left = mid - 1
         right = mid
         while left > 0 and right < len(s) - 1 and s[left - 1] == s[right + 1]:
             left = left - 1
             right = right + 1
-        second = s[left : right]
-        print(second)
+        second = s[left : right+1]
         return first if len(first) > len(second) else second
         
 
