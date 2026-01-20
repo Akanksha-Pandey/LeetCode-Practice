@@ -36,14 +36,24 @@ testcases = [
 ]
 
 class Solution:
-    def PalindromeLength(self, s: str, mid : int) -> int:
-	if	
-
     def longestPalindrome(self, s: str) -> str:
-        longest = 0
-	mid = len(s)/2 + 1
-        len = PalindromeLength(s, mid)
-
+        mid = len(s)//2
+        left = mid
+        right = mid
+        while left > 0 and right < len(s) - 1 and s[left - 1] == s[right + 1]:
+            left = left - 1
+            right = right + 1
+        first = s[left : right]
+        print(first)
+        
+        left = mid - 1
+        right = mid
+        while left > 0 and right < len(s) - 1 and s[left - 1] == s[right + 1]:
+            left = left - 1
+            right = right + 1
+        second = s[left : right]
+        print(second)
+        return first if len(first) > len(second) else second
         
 
 def main():
